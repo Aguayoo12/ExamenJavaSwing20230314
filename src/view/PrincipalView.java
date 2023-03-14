@@ -186,7 +186,7 @@ public class PrincipalView extends JFrame {
 		contentPane.add(JbtnVerMateria, gbc_JbtnVerMateria);
 		
 		JLabel lblNewLabel_3 = new JLabel("Datos de la materia");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 16));
 		GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
 		gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 0);
 		gbc_lblNewLabel_3.gridwidth = 3;
