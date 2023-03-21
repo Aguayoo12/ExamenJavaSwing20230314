@@ -71,8 +71,8 @@ public class PrincipalView extends JFrame {
 
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0};
-		gbl_contentPane.columnWeights = new double[]{1.0, 0.0, 0.0};
+//		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0};
+//		gbl_contentPane.columnWeights = new double[]{1.0, 0.0, 0.0};
 //		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, 0.0};
 //		gbl_contentPane.columnWeights = new double[]{0.0, 1.0, 0.0};
 //		gbl_contentPane.columnWeights = new double[]{0.0, 1.0};
@@ -101,27 +101,20 @@ public class PrincipalView extends JFrame {
 		contentPane.add(lblNewLabel, gbc_lblNewLabel);
 		
 		jcbCentro = new JComboBox();
-		jcbCentro.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		GridBagConstraints gbc_jcbCentro = new GridBagConstraints();
-		gbc_jcbCentro.weightx = 1.0;
-		gbc_jcbCentro.insets = new Insets(0, 0, 5, 5);
-		gbc_jcbCentro.fill = GridBagConstraints.HORIZONTAL;
-		gbc_jcbCentro.gridx = 1;
-		gbc_jcbCentro.gridy = 1;
-		contentPane.add(jcbCentro, gbc_jcbCentro);
-		
-		JButton jbtnNivel = new JButton("Cargar nieveles");
-		jbtnNivel.addActionListener(new ActionListener() {
+		jcbCentro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				llenarJcbNivel();
 			}
 		});
-		jbtnNivel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		GridBagConstraints gbc_jbtnNivel = new GridBagConstraints();
-		gbc_jbtnNivel.insets = new Insets(0, 0, 5, 0);
-		gbc_jbtnNivel.gridx = 2;
-		gbc_jbtnNivel.gridy = 1;
-		contentPane.add(jbtnNivel, gbc_jbtnNivel);
+		jcbCentro.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		GridBagConstraints gbc_jcbCentro = new GridBagConstraints();
+		gbc_jcbCentro.gridwidth = 2;
+		gbc_jcbCentro.weightx = 1.0;
+		gbc_jcbCentro.insets = new Insets(0, 0, 5, 15);
+		gbc_jcbCentro.fill = GridBagConstraints.HORIZONTAL;
+		gbc_jcbCentro.gridx = 1;
+		gbc_jcbCentro.gridy = 1;
+		contentPane.add(jcbCentro, gbc_jcbCentro);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nivel: ");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -133,26 +126,19 @@ public class PrincipalView extends JFrame {
 		contentPane.add(lblNewLabel_1, gbc_lblNewLabel_1);
 		
 		jcbNivel = new JComboBox();
-		jcbNivel.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		GridBagConstraints gbc_jcbNivel = new GridBagConstraints();
-		gbc_jcbNivel.insets = new Insets(0, 0, 5, 5);
-		gbc_jcbNivel.fill = GridBagConstraints.HORIZONTAL;
-		gbc_jcbNivel.gridx = 1;
-		gbc_jcbNivel.gridy = 2;
-		contentPane.add(jcbNivel, gbc_jcbNivel);
-		
-		JButton jbtMateria = new JButton("Cargar materias");
-		jbtMateria.addActionListener(new ActionListener() {
+		jcbNivel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				llenarJcbMateria();
 			}
 		});
-		jbtMateria.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		GridBagConstraints gbc_jbtMateria = new GridBagConstraints();
-		gbc_jbtMateria.insets = new Insets(0, 0, 5, 0);
-		gbc_jbtMateria.gridx = 2;
-		gbc_jbtMateria.gridy = 2;
-		contentPane.add(jbtMateria, gbc_jbtMateria);
+		jcbNivel.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		GridBagConstraints gbc_jcbNivel = new GridBagConstraints();
+		gbc_jcbNivel.gridwidth = 2;
+		gbc_jcbNivel.insets = new Insets(0, 0, 5, 15);
+		gbc_jcbNivel.fill = GridBagConstraints.HORIZONTAL;
+		gbc_jcbNivel.gridx = 1;
+		gbc_jcbNivel.gridy = 2;
+		contentPane.add(jcbNivel, gbc_jcbNivel);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Materia: ");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -164,26 +150,19 @@ public class PrincipalView extends JFrame {
 		contentPane.add(lblNewLabel_1_1, gbc_lblNewLabel_1_1);
 		
 		jcbMateria = new JComboBox();
-		jcbMateria.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		GridBagConstraints gbc_jcbMateria = new GridBagConstraints();
-		gbc_jcbMateria.insets = new Insets(0, 0, 5, 5);
-		gbc_jcbMateria.fill = GridBagConstraints.HORIZONTAL;
-		gbc_jcbMateria.gridx = 1;
-		gbc_jcbMateria.gridy = 3;
-		contentPane.add(jcbMateria, gbc_jcbMateria);
-		
-		JButton JbtnVerMateria = new JButton("Ver materia");
-		JbtnVerMateria.addActionListener(new ActionListener() {
+		jcbMateria.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ponerEnPantalla();
 			}
 		});
-		JbtnVerMateria.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		GridBagConstraints gbc_JbtnVerMateria = new GridBagConstraints();
-		gbc_JbtnVerMateria.insets = new Insets(0, 0, 5, 0);
-		gbc_JbtnVerMateria.gridx = 2;
-		gbc_JbtnVerMateria.gridy = 3;
-		contentPane.add(JbtnVerMateria, gbc_JbtnVerMateria);
+		jcbMateria.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		GridBagConstraints gbc_jcbMateria = new GridBagConstraints();
+		gbc_jcbMateria.gridwidth = 2;
+		gbc_jcbMateria.insets = new Insets(0, 0, 5, 15);
+		gbc_jcbMateria.fill = GridBagConstraints.HORIZONTAL;
+		gbc_jcbMateria.gridx = 1;
+		gbc_jcbMateria.gridy = 3;
+		contentPane.add(jcbMateria, gbc_jcbMateria);
 		
 		JLabel lblNewLabel_3 = new JLabel("Datos de la materia");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -204,6 +183,7 @@ public class PrincipalView extends JFrame {
 		contentPane.add(lblNewLabel_4, gbc_lblNewLabel_4);
 		
 		jtfId = new JTextField();
+		jtfId.setEnabled(false);
 		jtfId.setEditable(false);
 		jtfId.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_jtfId = new GridBagConstraints();
@@ -334,8 +314,9 @@ public class PrincipalView extends JFrame {
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+		gbc_btnNewButton.gridwidth = 3;
 		gbc_btnNewButton.insets = new Insets(0, 0, 5, 5);
-		gbc_btnNewButton.gridx = 1;
+		gbc_btnNewButton.gridx = 0;
 		gbc_btnNewButton.gridy = 11;
 		contentPane.add(btnNewButton, gbc_btnNewButton);
 		
@@ -388,6 +369,14 @@ public class PrincipalView extends JFrame {
 			jtfFecha.setText(new SimpleDateFormat("dd/MM/yyyy").format(m.getFechaInicio()));
 			chkMatricula.setSelected(m.isAdmiteMatricula());
 			
+		}
+		else {
+			jtfId.setText("");
+			jtfNombre.setText("");
+			jtfCodigo.setText("");
+			jtfUrl.setText("");
+			jtfFecha.setText("DD/MM/YYYY");
+			chkMatricula.setSelected(false);
 		}
 	}
 	
